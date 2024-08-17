@@ -1,0 +1,90 @@
+
+/* 
+  Design TODOs:
+  - Have the navbar be transparent (inspired by Maxi-g)
+  - Create a dark mode (must use javascript)
+  - In mobile screen width, the navbar will become the three line options button, should behave as Justin's website. (this will be the @media part)
+  - Make navbar smaller using @media (freecodecamp example)
+
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color1: red;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  /* Header design STARTS */
+  
+  header {
+    padding: 0;
+    position: fixed;
+    border-bottom: 1px solid;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blurred-background {
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(10px);
+  }
+  
+  #navbar {
+    position: fixed; /* Delete after submitting */
+    width: 60%;
+  }
+  
+  #navbar ul {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  #section-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  #section-links a {
+    box-sizing: content-box;
+    text-decoration: none;
+    color: black;
+  }
+  
+  #section-links a:hover {
+    color: green;
+    cursor: pointer;
+  }
+  
+  
+  /* Navbar design ENDS */
+  
+  
+  section {
+    padding: 60px 0;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  
+  /* Welcome-section design STARTS */
+  #welcome-section {
+  
+  }
+  
+  /* Welcome-section design ENDS */
+  

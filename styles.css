@@ -30,11 +30,11 @@
 
 /* KEYFRAMES STARTS */
 @keyframes fade-down {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(-50px) scale(0.9);
   }
-  100% {
+  to {
     opacity: 100;
     transform: translateY(0) scale(1);
   }
@@ -43,12 +43,11 @@
 @keyframes fade-in {
   from {
     opacity: 0;
-
-    transform: translateY(30px);
+    top: 30px;
   }
   to {
     opacity: 1;
-    transform: translateY(0px);
+    top: 0;
   }
 }
 
@@ -62,6 +61,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font1);
+  background: var(--color1);
 }
 
 header {
@@ -120,8 +120,12 @@ header {
   cursor: pointer;
   color: var(--color1);
   background-color: var(--color2-trans);
+  padding: auto;
   text-align: center;
   height: 26px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
 #section-links a:active {
@@ -180,6 +184,7 @@ header {
 /* Navbar design ENDS */
 
 
+
 main {
   width: 75%;
   max-width: 850px;
@@ -188,16 +193,35 @@ main {
 
 section {
   padding-top: 60px;
-  height: 100vh;
-  border: 1px solid;
-  animation: fade-in 0.7s 0.7s ease-out backwards;
+  min-height: 100vh;
+  height: auto;
 }
+
+/* TODO: Maybe add some text-shadow and different color */
+section h2 {
+  text-decoration: underline;
+}
+
+.fade-in {
+  animation: fade-in 0.7s 0.7s ease-out backwards;
+  position: relative;
+}
+
 
 
 /* Welcome-section design STARTS */
 
 #welcome-section {
-  background-color: aliceblue;
+  /* Might move all flex into section code block */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Create this wrapper to have the stop having page moved 
+down 30px after reloading. Solved issue by create a div that
+would use the fade in animation instead of the section. */
+#welcome-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,8 +232,12 @@ section {
 }
 
 #welcome-text {
-  width: 70%;
+  width: 80%;
   hyphens: auto;
+}
+
+#gallery {
+  display: grid;
 }
 
 /* Welcome-section design ENDS */

@@ -195,11 +195,18 @@ section {
   padding-top: 100px;
   min-height: 100vh;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* TODO: Maybe add some text-shadow and different color */
 section h2 {
   text-decoration: underline;
+}
+
+p {
+  hyphens: auto;
 }
 
 .fade-in {
@@ -221,16 +228,9 @@ has the fade in animation class instead of the section. */
 
 /* Welcome-section design STARTS */
 
-#welcome-section {
-  /* Might move all flex into section code block */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #welcome-text {
   width: 80%;
-  hyphens: auto;
+  padding-bottom: 50px;
 }
 
 #name, #mini-intro {
@@ -254,6 +254,14 @@ has the fade in animation class instead of the section. */
 
 .gallery-img:hover {
   transform: scale(1.4);
+  transition: transform 0.3s 0.7s ease;
+}
+
+/* The current grad and family photo gets to large when 
+transition plays, so I made the scale transition smaller 
+for them*/
+#grad-photo:hover, #family-photo:hover {
+  transform: scale(1.2);
   transition: transform 0.3s 0.7s ease;
 }
 
@@ -310,6 +318,43 @@ has the fade in animation class instead of the section. */
 
 #about-me-section {
   border: 1px solid;
+}
+
+.color-change-button {
+  text-decoration: none;
+  color: red;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border: 2px solid crimson;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.color-change-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: red;
+  transition: width 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.color-change-button:hover::before {
+  width: 100%;
+}
+
+.color-change-button:hover {
+  color: white;
+}
+
+.color-change-button span {
+  position: relative;
+  z-index: 1; /* Ensure the text is on top of the background */
 }
 
 /* about-me-section design ENDS */

@@ -12,19 +12,22 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
   /* These colors are the main theme */
-  --color1: rgb(193, 246, 237);
-  --color1-trans: rgba(193, 246, 237, 0.6);
-  --color2: rgb(2, 53, 60);
-  --color2-trans: rgba(2, 53, 60, 0.6);
-  --color3: rgb(68, 147, 66);
-  --color3-trans: rgba(68, 147, 66, 0.6);
-  --color4: rgb(46, 175, 125);
-  --color4-trans: rgba(46, 175, 125, 0.6);
-  --color5: rgb(63, 208, 201);
-  --color5-trans: rgba(63, 208, 201, 0.6);
+  --bkgd-color: rgb(255, 185, 97);
+  --bkgd-color-trans: rgba(255, 185, 97, 0.6);
+  --orange: rgb(243, 130, 111);
+  --orange-trans: rgba(243, 130, 111, 0.6);
+  --color3: rgb(192, 92, 126);
+  --color3-trans: rgba(192, 92, 126, 0.6);
+  --color4: rgb(114, 45, 97);
+  --color4-trans: rgba(114, 45, 97, 0.6);
+  --dark-blue: rgb(45, 53, 97);
+  --dark-blue-trans: rgba(45, 53, 97, 0.6);
 
+  --main-font-color: rgb(255, 194, 170);
   --font1: "Pathway Extreme";
 }
 
@@ -51,6 +54,15 @@
   }
 }
 
+@keyframes blinking {
+  0%, 50% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
 /* KEYFRAMES ENDS */
 
 
@@ -61,7 +73,11 @@ html {
 body {
   margin: 0;
   font-family: var(--font1);
-  background: var(--color1);
+  background: var(--dark-blue);
+}
+
+main {
+  color: var(--main-font-color);
 }
 
 header {
@@ -69,8 +85,9 @@ header {
   position: fixed;
   border-bottom: 1px solid;
   background: linear-gradient( 90deg,
-    var(--color3-trans),
-    var(--color5-trans)
+    var(--bkgd-color-trans),
+    var(--orange-trans),
+    var(--color3-trans)
   );
   width: 100%;
   height: 65px;
@@ -111,9 +128,9 @@ header {
 #section-links a {
   box-sizing: content-box;
   text-decoration: none;
-  color: var(--color2);
+  color: black;
   padding: 5px;
-  transition: transform 0.6s ease-in-out, color 0.6s, background-color 0.6s;
+  transition: transform 0.6s ease-in-out;
 }
 
 #section-links a:hover {
@@ -128,11 +145,6 @@ header {
   align-items: center;
 }
 
-#section-links a:active {
-  background-color: var(--color1-trans);
-  transition: background-color 0.3s;
-}
-
 .fa-moon {
   transition: color 0.6s, background-color 0.6s;
   box-sizing: content-box;
@@ -140,8 +152,8 @@ header {
 }
 
 .fa-moon:hover {
-  background-color: var(--color2-trans);
-  color: var(--color1);
+  background-color: var(--dark-blue);
+  color: white;
   cursor: pointer;
 }
 
@@ -155,6 +167,14 @@ header {
 
 .hover-up:hover {
   transform: translateY(-5px);
+}
+
+.hover-up-higher {
+  transition: transform 0.6s ease-in-out;
+}
+
+.hover-up-higher:hover {
+  transform: translateY(-15px);
 }
 
 .inline-block {
@@ -201,9 +221,6 @@ section {
 }
 
 /* TODO: Maybe add some text-shadow and different color */
-section h2 {
-  text-decoration: underline;
-}
 
 p {
   hyphens: auto;
@@ -224,13 +241,50 @@ has the fade in animation class instead of the section. */
   align-items: center;
 }
 
+.linear-grad-underline {
+  position: relative;
+}
+
+.linear-grad-underline::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient( 90deg,
+    var(--bkgd-color-trans),
+    var(--orange-trans),
+    var(--color3-trans)
+  );
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
 
 
 /* Welcome-section design STARTS */
 
 #welcome-text {
-  width: 80%;
+  width: 100%;
   padding-bottom: 50px;
+}
+
+#name {
+  border: 3px solid;
+  font-size: 2rem;
+  position: relative;
+}
+
+#name::after {
+  content: "";
+  height: 2.2rem;
+  width: 5px;
+  position: absolute;
+  background-color: var(--main-font-color);
+  margin-left: 2px;
+  margin-top: 5px;
+  animation-name: blinking;
+  animation-iteration-count: infinite;
+  animation-duration: 1.4s;
+  animation-timing-function: steps(1, end);;
 }
 
 #name, #mini-intro {
@@ -316,16 +370,11 @@ for them*/
 
 /* about-me-section design STARTS */
 
-#about-me-section {
-  border: 1px solid;
-}
-
 #about-me-div {
   border: 1px solid blue;
   width: 80%;
 
 }
-
 
 
 
@@ -367,3 +416,49 @@ for them*/
 }
 
 /* about-me-section design ENDS */
+
+
+
+
+/* Project Section STARTS */
+
+#projects-section {
+  border: 1px solid;
+}
+
+#projects-div {
+  width: 80%
+}
+
+#project-header {
+  margin-bottom: 50px;
+}
+
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  border: 1px solid red;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  width: 100%; /* When the screen gets small, make it act like justin's website */
+  height: 300px;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.box {
+  width: 250px;
+  height: calc(100% - 10px);
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+/* Project Section ENDS */

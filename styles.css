@@ -427,7 +427,7 @@ for them*/
 }
 
 #projects-div {
-  width: 80%
+  width: 100%
 }
 
 #project-header {
@@ -444,14 +444,19 @@ for them*/
 }
 
 .project {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 600px;
   width: 100%; /* When the screen gets small, make it act like justin's website */
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   border: 1px solid red;
+  border-radius: 5px;
   padding: 10px;
+}
+
+.project-img {
+  height: 125px;
 }
 
 .box {

@@ -1,12 +1,11 @@
 
 /* 
   Design TODOs:
-  - Have the navbar be transparent (inspired by Maxi-g)
-  - Create a dark mode (must use javascript)
+  - Create a dark mode (must use javascript) MIGHT NOT DO THIS
   - In mobile screen width, the navbar will become the three line options button, should behave as Justin's website. (this will be the @media part)
-  - Make navbar smaller using @media (freecodecamp example)
-  - When in a certain section, have the corresponding section be in a different color (like blue)
-*/
+  - Add point fingers to the contact links and make them animate forever 👉Click me👈
+  - When the width of viewport becomes 768px, we need to make the layout of projects smaller (justin's example)
+  */
 
 * {
     box-sizing: border-box;
@@ -130,13 +129,13 @@ header {
   text-decoration: none;
   color: black;
   padding: 5px;
-  transition: transform 0.6s ease-in-out;
+  background-color: none;
 }
 
 #section-links a:hover {
   cursor: pointer;
-  color: var(--color1);
-  background-color: var(--color2-trans);
+  color: var(--orange);
+  background-color: var(--dark-blue);
   padding: auto;
   text-align: center;
   height: 26px;
@@ -162,7 +161,7 @@ header {
 }
 
 .hover-up {
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, color 0.5s, background-color 0.7s;
 }
 
 .hover-up:hover {
@@ -197,6 +196,9 @@ header {
 @media (max-width: 625px) { 
   #navbar {
     background-color: red;
+  }
+  #section-links {
+    display: none;
   }
 }
 
@@ -422,10 +424,6 @@ for them*/
 
 /* Project Section STARTS */
 
-#projects-section {
-  border: 1px solid;
-}
-
 #projects-div {
   width: 100%
 }
@@ -439,7 +437,6 @@ for them*/
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  border: 1px solid red;
   width: 100%;
 }
 

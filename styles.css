@@ -184,25 +184,6 @@ header {
   font-weight: bold;
 }
 
-
-/* Smaller header for tablets and mobile devices */
-@media (max-width: 768px) { 
-  header {
-    height: 50px;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 625px) { 
-  #navbar {
-    background-color: red;
-  }
-  #section-links {
-    display: none;
-  }
-}
-
-
 /* Navbar design ENDS */
 
 
@@ -321,11 +302,6 @@ for them*/
   transition: transform 0.3s 0.7s ease;
 }
 
-#gallery div {
-  border: 1px solid;
-  width: 100%;
-  height: 100%;
-}
 
 /* The first gallery-img should be a img of myself */
 #grad-photo {
@@ -373,11 +349,34 @@ for them*/
 /* about-me-section design STARTS */
 
 #about-me-div {
-  border: 1px solid blue;
   width: 80%;
 
 }
 
+#about-me-skills-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#about-me-skills-list li {
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 12px;
+}
+
+.code {
+  font-size: 1.1rem;
+  color: var(--dark-blue);
+  transition: color 0.5s ease-out;
+}
+
+#about-me-skills-list li:hover .code {
+  color: var(--font1);
+}
 
 
 .color-change-button {
@@ -414,7 +413,7 @@ for them*/
 
 .color-change-button span {
   position: relative;
-  z-index: 1; /* Ensure the text is on top of the background */
+  z-index: 1;
 }
 
 /* about-me-section design ENDS */
@@ -531,3 +530,31 @@ for them*/
 
 
 /* Contact section ENDS */
+
+
+
+
+
+
+
+
+
+/* Smaller header for tablets and mobile devices */
+@media (max-width: 768px) { 
+  header {
+    height: 50px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 625px) { 
+  #navbar {
+    background-color: red;
+  }
+  #section-links {
+    display: none;
+  }
+  #section-links {
+
+  }
+}

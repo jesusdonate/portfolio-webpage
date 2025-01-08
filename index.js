@@ -137,6 +137,16 @@ function handleMenuItemClick(event) {
     targetSection.scrollIntoView({ behavior: 'smooth' });
 } 
 
+function handleResize() {
+    if (window.innerWidth > 625) {
+        // If the screen size is larger than 625px
+        NAV_MENU_CONTAINER.style.setProperty('display', 'none');
+        MAIN_CONTAINER.style.setProperty('display', 'block');
+        BARS_ICON.style.setProperty('display', 'block');
+        X_MARK.style.setProperty('display', 'none');
+    }
+}
+
 
 // Event listeners
 MOON_ICON.addEventListener('click', changeTheme)
@@ -147,3 +157,4 @@ document.addEventListener('DOMContentLoaded', loadTheme)
 document.querySelectorAll('.menu-item a').forEach((menuLink) => {
     menuLink.addEventListener('click', handleMenuItemClick);
     });
+window.addEventListener('resize', handleResize);

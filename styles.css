@@ -640,9 +640,6 @@ for them*/
   #about-me-div {
     width: 90%;
   }
-  #projects-section {
-    width: 85%;
-  }
   .project {
     display: flex;
     flex-direction: column;

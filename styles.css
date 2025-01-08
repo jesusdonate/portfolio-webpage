@@ -14,19 +14,19 @@
 
 
 :root {
-  /* These colors are the main theme */
-  --bkgd-color: rgb(255, 185, 97);
-  --bkgd-color-trans: rgba(255, 185, 97, 0.6);
-  --orange: rgb(243, 130, 111);
-  --orange-trans: rgba(243, 130, 111, 0.6);
+  /* By default, the color theme is dark */
+  --color1: rgb(255, 185, 97);
+  --color1-trans: rgba(255, 185, 97, 0.6);
+  --color2: rgb(243, 130, 111);
+  --color2-trans: rgba(243, 130, 111, 0.6);
   --color3: rgb(192, 92, 126);
   --color3-trans: rgba(192, 92, 126, 0.6);
   --color4: rgb(114, 45, 97);
   --color4-trans: rgba(114, 45, 97, 0.6);
-  --dark-blue: rgb(45, 53, 97);
-  --dark-blue-trans: rgba(45, 53, 97, 0.6);
+  --color5: rgb(45, 53, 97);
+  --color5-trans: rgba(45, 53, 97, 0.6);
+  --font-color: rgb(255, 194, 170);
 
-  --main-font-color: rgb(255, 194, 170);
   --font1: "Pathway Extreme";
 }
 
@@ -62,6 +62,24 @@
   }
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 /* KEYFRAMES ENDS */
 
 
@@ -72,11 +90,11 @@ html {
 body {
   margin: 0;
   font-family: var(--font1);
-  background: var(--dark-blue);
+  background: var(--color5);
 }
 
 main {
-  color: var(--main-font-color);
+  color: var(--font-color);
 }
 
 header {
@@ -84,8 +102,8 @@ header {
   position: fixed;
   border-bottom: 1px solid;
   background: linear-gradient( 90deg,
-    var(--bkgd-color-trans),
-    var(--orange-trans),
+    var(--color1-trans),
+    var(--color2-trans),
     var(--color3-trans)
   );
   width: 100%;
@@ -94,6 +112,11 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 3;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -134,8 +157,8 @@ header {
 
 #section-links a:hover {
   cursor: pointer;
-  color: var(--orange);
-  background-color: var(--dark-blue);
+  color: var(--color2);
+  background-color: var(--color5);
   padding: auto;
   text-align: center;
   height: 26px;
@@ -144,14 +167,14 @@ header {
   align-items: center;
 }
 
-.fa-moon {
+.theme-icon {
   transition: color 0.6s, background-color 0.6s;
   box-sizing: content-box;
   padding: 10px;
 }
 
-.fa-moon:hover {
-  background-color: var(--dark-blue);
+.theme-icon:hover {
+  background-color: var(--color5);
   color: white;
   cursor: pointer;
 }
@@ -184,6 +207,10 @@ header {
   font-weight: bold;
 }
 
+.menu-icons {
+  display: none;
+}
+
 /* Navbar design ENDS */
 
 
@@ -195,7 +222,7 @@ main {
 }
 
 section {
-  padding-top: 100px;
+  padding-top: 50px;
   min-height: 100vh;
   height: auto;
   display: flex;
@@ -233,8 +260,8 @@ has the fade in animation class instead of the section. */
   width: 100%;
   height: 4px;
   background: linear-gradient( 90deg,
-    var(--bkgd-color-trans),
-    var(--orange-trans),
+    var(--color1-trans),
+    var(--color2-trans),
     var(--color3-trans)
   );
   position: absolute;
@@ -261,13 +288,13 @@ has the fade in animation class instead of the section. */
   height: 2.2rem;
   width: 5px;
   position: absolute;
-  background-color: var(--main-font-color);
+  background-color: var(--font-color);
   margin-left: 2px;
   margin-top: 5px;
   animation-name: blinking;
   animation-iteration-count: infinite;
   animation-duration: 1.4s;
-  animation-timing-function: steps(1, end);;
+  animation-timing-function: steps(1, end);
 }
 
 #name, #mini-intro {
@@ -350,7 +377,6 @@ for them*/
 
 #about-me-div {
   width: 80%;
-
 }
 
 #about-me-skills-list {
@@ -358,6 +384,7 @@ for them*/
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -368,9 +395,18 @@ for them*/
   padding-left: 12px;
 }
 
+#edu-list {
+  list-style-type: none;
+}
+
+.shaking {
+  display: inline-block;
+  animation: shake 4s infinite;
+}
+
 .code {
   font-size: 1.1rem;
-  color: var(--dark-blue);
+  color: var(--color5);
   transition: color 0.5s ease-out;
 }
 
@@ -449,7 +485,7 @@ for them*/
   height: auto;
   border-radius: 5px;
   padding: 10px;
-  background-color: var(--orange-trans);
+  background-color: var(--color2-trans);
 }
 
 .img-box-linker {
@@ -502,6 +538,12 @@ for them*/
 
 .project-details-git-icon {
   font-size: 2rem;
+  color: var(--font-color);
+}
+
+.project-details-git-icon:hover {
+  color: var(--color1);
+  cursor: pointer;
 }
 
 .box {
@@ -514,8 +556,12 @@ for them*/
 /* Project Section ENDS */
 
 
+/* Nav Menu Container STARTS */
+#nav-menu-container {
+  display: none;
+}
 
-
+/* Nav Menu Container ENDS */
 
 
 /* Contact section STARTS */
@@ -527,8 +573,6 @@ for them*/
   margin: 10px;
 }
 
-
-
 /* Contact section ENDS */
 
 
@@ -537,7 +581,7 @@ for them*/
 
 
 
-
+/* The navbar and the projects need to change in appearance in smaller screens */
 
 /* Smaller header for tablets and mobile devices */
 @media (max-width: 768px) { 
@@ -545,16 +589,68 @@ for them*/
     height: 50px;
     font-size: 0.8rem;
   }
+  .theme-icon {
+    font-size: 1.15rem;
+  }
 }
 
 @media (max-width: 625px) { 
+  section {
+    padding-top: 30px;
+  }
   #navbar {
-    background-color: red;
+    width: 75%;
+  }
+  .menu-icons {
+    display: block;
+    color: black;
+    font-size: 1.25rem;
+    transition: transform 0.2s ease;
+  }
+  .menu-icons:hover {
+    cursor: pointer;
+  }
+  .menu-icons:active{
+    transform: translateY(-5px);
   }
   #section-links {
     display: none;
   }
-  #section-links {
-
+  #menu-list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  .menu-item {
+    margin: 15px;
+  }
+  .menu-link {
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--font-color);
+    text-decoration: none;
+  }
+  main {
+    width: 90%;
+  }
+  #about-me-div {
+    width: 90%;
+  }
+  #projects-section {
+    width: 85%;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .project-img {
+    width: 75%;
+    height: 60%;
   }
 }
+

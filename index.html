@@ -21,177 +21,203 @@
           <li><a href="#projects-section" class="nav-items hover-up inline-block bold">Projects</a></li>
           <li><a href="#contact-section" class="nav-items hover-up inline-block bold">Contact</a></li>
         </ul>
-        <i class="fa-solid fa-moon nav-items hover-up"></i>
+        <i id="moon-icon" class="fa-solid fa-moon nav-items hover-up theme-icon"></i>
+        <i id="sun-icon" class="fa-regular fa-sun nav-items hover-up theme-icon" style="display: none;"></i>
+        <span class="menu-icons">
+          <i id="bars-icon" class="fa-solid fa-bars"></i>
+          <i id="x-mark" class="fa-solid fa-xmark" style="display: none;"></i>
+        </span>
       </nav>
     </header>
 
-
-
     <main>
-      <section id="welcome-section">
-        <div class="fade-in fade-in-wrapper">
-          <div id="welcome-text">
-            <h2 id="name">👋 Hi, I'm Jesus Donate</h2>
-            <p id="mini-intro">
-              A passionate software and web developer with
-              an interest in data analysis.
+      <section id="main-container">
+        <section id="welcome-section">
+          <div class="fade-in fade-in-wrapper">
+            <div id="welcome-text">
+              <h2 id="name">👋 Hi, I'm Jesus Donate</h2>
+              <p id="mini-intro">
+                A passionate software and web developer with
+                an interest in data analysis.
+              </p>
+            </div>
+            <!-- Add photos of me -->
+            <div id="gallery">
+              <img id="family-photo" class="gallery-img" src="photos\Resized_20211227_1841271.jpg">
+              <img id="grad-photo" class="gallery-img" src="photos\Resized_20240519_1832220.jpg">
+              <img id="me-and-jas-photo1" class="gallery-img" src="photos\IMG_6511.jpg">
+              <img id="family-dinner-photo" class="gallery-img" src="photos\Screenshot_20240819_171808_Gallery.jpg">
+              <img id="me-and-jas-photo2" class="gallery-img" src="photos\IMG_9779.jpg">
+              <img id="baby-photo" class="gallery-img" src="photos\20230418_135749.jpg">
+              <img id="snowman-photo" class="gallery-img" src="photos\20230319_145618.jpg">
+            </div>
+          </div>
+        </section>
+
+        <section id="about-me-section">
+          <div id="about-me-div" class="fade-in fade-in-wrapper">
+            <h2 class="linear-grad-underline">About Me</h2>
+            <p>
+              I am a recent Computer Science graduate with a 
+              strong interest in data analytics and data science. 
             </p>
-          </div>
-          <!-- Add photos of me -->
-          <div id="gallery">
-            <img id="family-photo" class="gallery-img" src="photos\Resized_20211227_1841271.jpg">
-            <img id="grad-photo" class="gallery-img" src="photos\Resized_20240519_1832220.jpg">
-            <img id="me-and-jas-photo1" class="gallery-img" src="photos\IMG_6511.jpg">
-            <img id="family-dinner-photo" class="gallery-img" src="photos\Screenshot_20240819_171808_Gallery.jpg">
-            <img id="me-and-jas-photo2" class="gallery-img" src="photos\IMG_9779.jpg">
-            <img id="baby-photo" class="gallery-img" src="photos\20230418_135749.jpg">
-            <img id="snowman-photo" class="gallery-img" src="photos\20230319_145618.jpg">
-          </div>
-        </div>
-      </section>
 
-      <section id="about-me-section">
-        <div id="about-me-div" class="fade-in fade-in-wrapper">
-          <h2 class="linear-grad-underline">About Me</h2>
-          <p>
-            I am a recent Computer Science graduate with a 
-            strong interest in data structures, algorithms, databases 
-            and data analytics. I enjoy tackling challenging problems 
-            and am always striving to improve my skills and learn something new every day.
-          </p>
+            <h4><u>EDUCATION</u> 🧑‍🎓</h4>
+            <p>California State University, Long Beach</p>
+            <ul id="edu-list">
+              <!-- Replace bullet points with degree paper roll -->
+              <li><span class="degree-paper shaking">🎓</span>Fall of 2024: B.S in Computer Science</li>
+              <li><span class="degree-paper shaking">🎓</span>Spring of 2027: M.S in Applied Statistics</li>
+            </ul>
 
-          <!-- Talk about bio, likes, interests, hobbies, location, degree -->
-          <!-- Make these an unordered list and have animations for the points -->
-          <!-- Example: okamune.com -->
+            <h4><u>BIO</u> 📃</h4>
+            <p>
+              I was born on August 12, 2001, in Bellflower, CA. My journey into programming began in middle school, but it wasn't until high school that I truly immersed myself in coding. During my time at CSULB, I developed a strong interest in data science, and I am currently focused on expanding my knowledge in data analytics.
+            </p>
+            <p>
+              I am planning to graduate with my Master's in Applied Statistics around 2027 and am actively seeking internships to gain hands-on experience in data analysis. I have a passion for tackling challenging problems and am committed to continuously improving my skills while learning something new every day.
+            </p>
 
-          <h4>BIO 📃</h4>
-          <p>
-            I was born in Bellflower, CA in August 12, 2001.
-          </p>
-          <p>
             
-          </p>
+            <h4><u>Tools I've used</u> 🧑‍💻</h4>
+            <ul id="about-me-skills-list">
+              <li><span class="code">&lt; </span>Python<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>C++<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>SQL<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>Firebase<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>MongoDB<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>JavaScript<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>Typescript<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>React Native<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>HTML<span class="code"> /&gt;</span></li>
+              <li><span class="code">&lt; </span>CSS<span class="code"> /&gt;</span></li>
+            </ul>
 
-          <h4>EDUCATION 🎓</h4>
-          <p>California State University, Long Beach</p>
-          <p>B.S in Computer Science</p>
-          <p>M.S in Applied Statistics</p>
-          
-          <h4>SKILLS 🧑‍💻</h4>
-          <ul id="about-me-skills-list">
-            <li><span class="code">&lt; </span>Python<span class="code"> /&gt;</span></li>
-            <li><span class="code">&lt; </span>C++<span class="code"> /&gt;</span></li>
-            <li><span class="code">&lt; </span>SQL<span class="code"> /&gt;</span></li>
-          </ul>
+          </div>
+        </section>
 
-          <h4>PERSONAL HOBBIES 🎸</h4>
+        <section id="projects-section">
+          <div id="projects-div" class="fade-in fade-in-wrapper">
+            <h2 id="project-header" class="linear-grad-underline">Projects</h2>
+            <div id="project-gallery">
 
-          <a class="color-change-button" href=""><span>Resume</span></a>
-
-        </div>
-      </section>
-
-      <section id="projects-section">
-        <div id="projects-div" class="fade-in fade-in-wrapper">
-          <h2 id="project-header" class="linear-grad-underline">Projects</h2>
-          <div id="project-gallery">
-            <div class="project hover-up-higher">
-              <a class="img-box-linker" href="">
-                <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of [Project name]" />
-              </a>
-              <div class="project-details">
-                <h3 class="project-details-title">Tic Tac Toe Game</h3>
-                <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
-                  classic gameplay against AI or a friend online or local.
-                </p>
-                <ul class="project-details-skills buttons">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Networking</li>
-                  <li>AI</li>
-                </ul>
-                <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+              <!-- Habibeats Project -->
+              <div class="project hover-up-higher">
+                <a class="img-box-linker" href="">
+                  <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of Habibeats" />
+                </a>
+                <div class="project-details">
+                  <h3 class="project-details-title">Habibeats App</h3>
+                  <p class="project-details-desc">
+                    Habibeats is a mobile app for iOS and Android that 
+                    connects concertgoers by allowing users to create profiles, match with others, 
+                    and find events tailored to their preferences.
+                  </p>
+                  <ul class="project-details-skills">
+                    <li>Typescript</li>
+                    <li>React Native</li>
+                    <li>Expo</li>
+                    <li>Firebase</li>
+                    <li>Google Console</li>
+                  </ul>
+                  <a href="https://github.com/maxiguillermo1/habiBeats" target="_blank"><i class="fa-brands fa-github project-details-git-icon"></i></a>
+                </div>
               </div>
-            </div>
 
-            <div class="project hover-up-higher">
-              <a class="img-box-linker" href="">
-                <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of [Project name]" />
-              </a>
-              <div class="project-details">
-                <h3 class="project-details-title">Checkers Game</h3>
-                <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
-                  classic gameplay against AI or a friend online or local.
-                </p>
-                <ul class="project-details-skills">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Networking</li>
-                  <li>AI</li>
-                </ul>
-                <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+              <!-- Tic Tac Toe Game -->
+              <div class="project hover-up-higher">
+                <a class="img-box-linker" href="">
+                  <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of Tic Tac Toe Game" />
+                </a>
+                <div class="project-details">
+                  <h3 class="project-details-title">Tic Tac Toe Game</h3>
+                  <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
+                    classic gameplay against AI or a friend online or local.
+                  </p>
+                  <ul class="project-details-skills buttons">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Networking</li>
+                    <li>AI</li>
+                  </ul>
+                  <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+                </div>
               </div>
-            </div>
 
-            <div class="project hover-up-higher">
-              <a class="img-box-linker" href="">
-                <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of [Project name]" />
-              </a>
-              <div class="project-details">
-                <h3 class="project-details-title">Chess Game</h3>
-                <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
-                  classic gameplay against AI or a friend online or local.
-                </p>
-                <ul class="project-details-skills">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Networking</li>
-                  <li>AI</li>
-                </ul>
-                <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+              <!-- Checkers game -->
+              <div class="project hover-up-higher">
+                <a class="img-box-linker" href="">
+                  <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of Checkers" />
+                </a>
+                <div class="project-details">
+                  <h3 class="project-details-title">Checkers Game</h3>
+                  <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
+                    classic gameplay against AI or a friend online or local.
+                  </p>
+                  <ul class="project-details-skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Networking</li>
+                    <li>AI</li>
+                  </ul>
+                  <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+                </div>
               </div>
-            </div>
 
-            <div class="project hover-up-higher">
-              <a class="img-box-linker" href="">
-                <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of [Project name]" />
-              </a>
-              <div class="project-details">
-                <h3 class="project-details-title">Habibeats App</h3>
-                <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
-                  classic gameplay against AI or a friend online or local.
-                </p>
-                <ul class="project-details-skills">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Networking</li>
-                  <li>AI</li>
-                </ul>
-                <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+              <!-- Add Discord bots -->
+
+              <!-- Add Big Integer Assignment from CECS 325 -->
+
+              <!-- Something relating to data science -->
+              <div class="project hover-up-higher">
+                <a class="img-box-linker" href="">
+                  <img class="project-img" src="photos\default-thumbnail.jpg" alt="thumbnail of [Project name]" />
+                </a>
+                <div class="project-details">
+                  <h3 class="project-details-title">Chess Game</h3>
+                  <p class="project-details-desc">An interactive Tic Tac Toe game that allows players to enjoy 
+                    classic gameplay against AI or a friend online or local.
+                  </p>
+                  <ul class="project-details-skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Networking</li>
+                    <li>AI</li>
+                  </ul>
+                  <a><i class="fa-brands fa-github project-details-git-icon"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="contact-section">
-        <div class="fade-in fade-in-wrapper">
-          <h2 id="contact-title" class="linear-grad-underline">Contact</h2>
-          <a class="contact-links" href="https://www.linkedin.com/in/jesus-donate" target="_blank"><i class="fa-brands fa-linkedin"></i> @Jesus-Donate</a>
-          <a class="contact-links" href="https://github.com/jesusdonate" target="_blank"><i class="fa-brands fa-github"></i> @jesusdonate</a>
-          <a class="contact-links" href="https://discordapp.com/users/715024764271460354" target="_blank"><i class="fa-brands fa-discord"></i> @flaxendegrees</a>
-          <a class="contact-links" href="mailto:jesusdonate2001@gmail.com"><i class="fa-solid fa-envelope"></i> jesusdonate2001@gmail.com</a>
-        </div>
+        <section id="contact-section">
+          <div class="fade-in fade-in-wrapper">
+            <h2 id="contact-title" class="linear-grad-underline">Contact</h2>
+            <a class="contact-links" href="https://www.linkedin.com/in/jesus-donate" target="_blank"><i class="fa-brands fa-linkedin"></i> @Jesus-Donate</a>
+            <a class="contact-links" href="https://github.com/jesusdonate" target="_blank"><i class="fa-brands fa-github"></i> @jesusdonate</a>
+            <a class="contact-links" href="https://discordapp.com/users/715024764271460354" target="_blank"><i class="fa-brands fa-discord"></i> @flaxendegrees</a>
+            <a class="contact-links" href="mailto:jesusdonate2001@gmail.com"><i class="fa-solid fa-envelope"></i> jesusdonate2001@gmail.com</a>
+          </div>
+        </section>
+      </section>
+      
+
+      <section id="nav-menu-container">
+        <ul id="menu-list">
+          <li class="menu-item hover-up"><a id="menu-welcome" class="menu-link" href="#welcome-section">Jesus Donate</a></li>
+          <li class="menu-item hover-up"><a id="menu-about-me" class="menu-link" href="#about-me-section">About Me</a></li>
+          <li class="menu-item hover-up"><a id="menu-project" class="menu-link" href="#project-section">Projects</a></li>
+          <li class="menu-item hover-up"><a id="menu-contact" class="menu-link" href="#contact-section">Contact</a></li>
+        </ul>
       </section>
     </main>
-
   </body>
+  <script src="./index.js"></script>
 </html>
